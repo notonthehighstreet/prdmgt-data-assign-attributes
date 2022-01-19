@@ -4,6 +4,9 @@
 
 This script is intended to provide a way to assign existing Attributes to existing Product Types.
 
+At this point only non-mandatory attributes are supported (not validated by this script yet) as otherwise we'd have to 
+enforce default values for existing products.
+
 It will perform some rudimentary checks of the data, as well as generating a few scripts to verify data integrity.
 
 It is NOT designed to add new Attributes or Attribute Values, or create new Product Types (the latter can be done via this
@@ -69,4 +72,4 @@ Script: attribute_insert.sql
 
 Assuming the basic/data integrity checks pass then we can copy the insert statements generated into SQL file above into 
 the PIM project and apply them using the flyway migration scripts. This ensures the data will be added to all environments
-in a consistent and repeatable way.
+in a consistent and repeatable way. An example can be seen here: https://github.com/notonthehighstreet/prdmgt-data-api/pull/1271
