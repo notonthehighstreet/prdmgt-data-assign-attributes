@@ -38,7 +38,7 @@ def checkAttributeExists(attribute_ids):
         output_file.close()
 
 def assignAttributes(product_type_id, attribute_id):
-    attribute_sql = "INSERT IGNORE INTO product_type_attributes (product_type_id, attribute_id) VALUES ('{}', '{}');\n".format(product_type_id, attribute_id)
+    attribute_sql = "INSERT IGNORE INTO pim_product_type_attributes (product_type_id, attribute_id) VALUES ('{}', '{}');\n".format(product_type_id, attribute_id)
 
     return attribute_sql
 
